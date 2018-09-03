@@ -1,0 +1,17 @@
+@import '../../Mixins';
+
+.sample-rating {
+  background: #f6f5f5;
+  padding: 10px;
+  text-align: left;
+
+  th {
+    border-bottom: 1px solid $darkerGray;
+    padding-bottom: 10px;
+  }
+
+  td {
+    padding: 10px 30px 0 0;
+    vertical-align: top;
+  }
+}

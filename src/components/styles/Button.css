@@ -1,0 +1,20 @@
+.button {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer; }
+  .button-flat {
+    background-color: #f6f5f5; }
+  .button-primary {
+    background-color: #c91300;
+    color: white; }
+  .button-secondary {
+    background-color: black;
+    color: white; }
+
+.button-container {
+  padding: 0.25rem 2rem;
+  min-height: inherit;
+  height: inherit; }
+  .button-container.button-large {
+    padding: 0.5rem 4rem; }

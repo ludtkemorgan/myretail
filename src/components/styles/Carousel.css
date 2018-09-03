@@ -1,0 +1,28 @@
+.carousel-image {
+  margin: 30px auto;
+  display: block;
+  max-width: 100%; }
+
+.carousel-additional {
+  text-align: center; }
+  .carousel-additional:hover {
+    cursor: pointer; }
+
+.carousel-additional-image {
+  height: 100%;
+  max-width: 75px;
+  padding: 5px; }
+
+.change-image {
+  color: #666666;
+  display: inline-flex;
+  font-size: 30px;
+  margin: 25px 5px;
+  vertical-align: top; }
+
+.view-larger {
+  color: #cccccc;
+  text-align: center;
+  padding-bottom: 15px; }
+  .view-larger .svg-inline--fa {
+    font-size: 24px; }

@@ -1,0 +1,39 @@
+@import '../../Mixins';
+
+.carousel-image {
+  margin: 30px auto;
+  display: block;
+  max-width: 100%;
+}
+
+.carousel-additional {
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.carousel-additional-image {
+  height: 100%;
+  max-width: 75px;
+  padding: 5px;
+}
+
+.change-image {
+  color: $darkestGray;
+  display: inline-flex;
+  font-size: 30px;
+  margin: 25px 5px;
+  vertical-align: top;
+}
+
+.view-larger {
+  color: $lightGray;
+  text-align: center;
+  padding-bottom: 15px;
+
+  .svg-inline--fa {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../Mixins';
+
+.button {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+
+  &-flat {
+    background-color: $lighestGray;
+  }
+
+  &-primary {
+    background-color: $red;
+    color: white;
+  }
+
+  &-secondary {
+    background-color: black;
+    color: white;
+  }
+}
+
+.button-container {
+  padding: 0.25rem 2rem;
+  min-height: inherit;
+  height: inherit;
+
+  &.button-large {
+    padding: 0.5rem 4rem;
+  }
+}
