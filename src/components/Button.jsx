@@ -38,7 +38,7 @@ export class Button extends Component<ButtonProps> {
 
     return (
       <Tag className={addedClassNames} id={buttonId} href={href} type={type}>
-        <span class={buttonSize}>{text} </span>
+        <div className={buttonSize}>{text} </div>
       </Tag>
     );
   }

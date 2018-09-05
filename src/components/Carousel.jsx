@@ -43,11 +43,9 @@ export class Carousel extends Component {
     }));
   }
 
-  setNewImage(e) {
-    const selectImageSrc = e.currentTarget.src;
-
+  setNewImage(src, e) {
     this.setState({
-      selectedImage: selectImageSrc});
+      selectedImage: src});
   }
 
   render() {
@@ -85,12 +83,13 @@ export class Carousel extends Component {
               const altText = "alternative image " + imageNumber;
               const classes = "carousel-additional-image grid-column-1-5";
               return (
-                <img id={imageId}
+                <img key={imageId}
+                  id={imageId}
                   data-index={imageNumber}
                   className={classes}
                   src={image.image}
                   alt={altText}
-                  onClick={this.setNewImage}/>
+                  onClick={() => this.setNewImage(image.image)}/>
               );
           },this)}
             <a className={`change-image grid-column-fill ${displayNext}`} onClick={this.nextImage}>

@@ -1,32 +1,42 @@
-@import '../../Mixins';
+@import '../../styles/Mixins';
 
 .button {
+  background-color: white;
   border-radius: 0.25rem;
   border-style: solid;
   border-width: 0;
-  cursor: pointer;
 
-  &-flat {
+  &-flat .button-container {
     background-color: $lighestGray;
   }
 
-  &-primary {
-    background-color: $red;
+  &-primary .button-container {
+    background-image: linear-gradient(to top, #cc0000, #dd5353);
+    border: 1px solid #cc0000;
     color: white;
+
+    &:hover {
+      background-image: linear-gradient(to top, #cc0000, #cc0000);
+    }
   }
 
-  &-secondary {
-    background-color: black;
+  &-secondary .button-container {
+    background-image: linear-gradient(to top, black, #525252);
+    border: 1px solid black;
     color: white;
+
+    &:hover {
+      background-image: linear-gradient(to top, black, black);
+    }
   }
 }
 
 .button-container {
-  padding: 0.25rem 2rem;
-  min-height: inherit;
-  height: inherit;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
 
   &.button-large {
-    padding: 0.5rem 4rem;
+    font-size: 18px;
   }
 }

@@ -1,9 +1,10 @@
-@import 'Mixins';
+@import 'styles/Mixins';
+@import 'styles/Helper.css';
 
 .my-retail-main {
   margin: 75px auto;
   padding: 30px;
-  max-width: 1267px;
+  max-width: 1067px;
 }
 
 .product-title {
@@ -30,87 +31,4 @@
 .qualifier {
   font-size: 13px;
   display: inline-block;
-}
-
-
-
-.bold {
-  font-weight: bold;
-}
-
-.non-bold {
-  font-weight: normal;
-}
-
-.muted {
-  pointer-events: none;
-  color: $lightGray;
-}
-
-.type-20 {
-  font-size: 20px;
-}
-
-.type-13 {
-  font-size: 13px;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.grid-column-1-2 {
-  width: 50%;
-
-  @media only screen and (max-width: $maxMobile) {
-    width: 100%;
-  }
-}
-
-.grid-column-1-5 {
-  width: 20%;
-}
-
-.grid-column-fill {
-  flex-grow: 1;
-}
-
-.x-padding-right-ten {
-  padding-right: 10px;
-}
-
-.y-gutter-all-ten {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.y-padding-all-ten {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.y-padding-top-twenty {
-  padding-top: 20px;
-}
-
-.y-gutter-all-twenty {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.red {
-  color: $red;
-}
-
-.darkerGray {
-  color: $darkerGray;
-}
-
-.darkestGray {
-  color: $darkestGray;
-}
-
-.hidden {
-  display: none;
 }

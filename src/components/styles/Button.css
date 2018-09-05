@@ -1,20 +1,26 @@
 .button {
+  background-color: white;
   border-radius: 0.25rem;
   border-style: solid;
-  border-width: 0;
-  cursor: pointer; }
-  .button-flat {
+  border-width: 0; }
+  .button-flat .button-container {
     background-color: #f6f5f5; }
-  .button-primary {
-    background-color: #c91300;
+  .button-primary .button-container {
+    background-image: linear-gradient(to top, #cc0000, #dd5353);
+    border: 1px solid #cc0000;
     color: white; }
-  .button-secondary {
-    background-color: black;
+    .button-primary .button-container:hover {
+      background-image: linear-gradient(to top, #cc0000, #cc0000); }
+  .button-secondary .button-container {
+    background-image: linear-gradient(to top, black, #525252);
+    border: 1px solid black;
     color: white; }
+    .button-secondary .button-container:hover {
+      background-image: linear-gradient(to top, black, black); }
 
 .button-container {
-  padding: 0.25rem 2rem;
-  min-height: inherit;
-  height: inherit; }
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 0; }
   .button-container.button-large {
-    padding: 0.5rem 4rem; }
+    font-size: 18px; }

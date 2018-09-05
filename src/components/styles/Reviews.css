@@ -1,10 +1,21 @@
+.overall-rating {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between; }
+  .overall-rating .rating {
+    align-items: flex-end;
+    display: flex; }
+  .overall-rating .view-all {
+    cursor: pointer; }
+
 .sample-rating {
   background: #f6f5f5;
   padding: 10px;
   text-align: left; }
   .sample-rating th {
     border-bottom: 1px solid #999999;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    width: 50%; }
   .sample-rating td {
     padding: 10px 30px 0 0;
     vertical-align: top; }

@@ -1,4 +1,19 @@
-@import '../../Mixins';
+@import '../../styles/Mixins';
+
+.overall-rating {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+
+  .rating {
+    align-items: flex-end;
+    display: flex;
+  }
+
+  .view-all {
+    cursor: pointer;
+  }
+}
 
 .sample-rating {
   background: #f6f5f5;
@@ -8,6 +23,7 @@
   th {
     border-bottom: 1px solid $darkerGray;
     padding-bottom: 10px;
+    width: 50%;
   }
 
   td {

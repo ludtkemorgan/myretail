@@ -1,4 +1,4 @@
-@import '../../Mixins';
+@import '../../styles/Mixins';
 
 .carousel-image {
   margin: 30px auto;
@@ -15,7 +15,7 @@
 }
 
 .carousel-additional-image {
-  height: 100%;
+  // height: 100%;
   max-width: 75px;
   padding: 5px;
 }
