@@ -34,8 +34,6 @@ class App extends Component {
                 title={entry.title}
                 carouselId="product-image"
                 numberShown={3}/>
-              {/*Image*/}
-              {/*Image carousel*/}
             </div>
             <div className="grid-column-1-2 grid-column-mobile-1-1">
               <div className="price-section y-gutter-all-twenty">
@@ -47,10 +45,10 @@ class App extends Component {
                 </span>
               </div>
               <div className="promotion-section y-padding-all-ten">
-                {/*potentially add tooltip info*/}
-                {entry.Promotions.map(function(promotion, index) {
+                {/*potentially add modal to display legal text*/}
+                {entry.Promotions && entry.Promotions.map((promotion, index) => {
                   return (
-                    <div key={`promotion-${index}`} className="promotion red y-gutter-all-ten">
+                    <div key={`promotion-${index}`} className="clickable red y-gutter-all-ten">
                       <span className="x-padding-right-ten">
                         <FontAwesomeIcon icon="tag" />
                       </span>
@@ -79,9 +77,11 @@ class App extends Component {
               </div>
               <div className="return-policy">
                 <div className="returns">returns</div>
-                <div >{entry.ReturnPolicy[0].ReturnPolicyDetails[0].guestMessage}</div>
+                <div className="return-full">This item must be returned within 30 days of the ship date. See
+                  <a href="http://www.target.com/HelpContent?help=/sites/html/TargetOnline/help/returns_and_refunds/returns_and_refunds.html">Target return policy</a>
+                  for details. Prices, promotions, styles and availability may vary by store and online.</div>
               </div>
-              <div className="full-return-policy" dangerouslySetInnerHTML={{__html: entry.ReturnPolicy[0].legalCopy}} />
+              {/*<div className="full-return-policy" dangerouslySetInnerHTML={{__html: entry.ReturnPolicy[0].legalCopy}} />*/}
               <div className="additional-buttons y-gutter-all-twenty grid">
                 <Button buttonId="registry" text="ADD TO REGISTRY" style={ButtonStyle.FLAT} classes="grid-column-1-3"/>
                 <Button buttonId="list" text="ADD TO LIST" style={ButtonStyle.FLAT} classes="grid-column-1-3"/>

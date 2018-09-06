@@ -24,3 +24,22 @@
 .qualifier {
   font-size: 13px;
   display: inline-block; }
+
+.return-policy {
+  display: flex;
+  align-items: center; }
+
+.returns {
+  border-right: 1px solid #cccccc;
+  font-size: 24px;
+  padding-right: 10px; }
+  @media only screen and (max-width: 768px) {
+    .returns {
+      font-size: 18px; } }
+
+.return-full {
+  font-size: 13px;
+  padding-left: 10px; }
+  @media only screen and (max-width: 768px) {
+    .return-full {
+      font-size: 10px; } }

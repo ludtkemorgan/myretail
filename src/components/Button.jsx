@@ -34,7 +34,7 @@ export class Button extends Component<ButtonProps> {
     const type = (href ? 'button' : 'submit');
     const buttonStyle = 'button button-' + style + ' ';
     const addedClassNames = buttonStyle + (classes || "");
-    const buttonSize = "button-container button-" + size;
+    const buttonSize = "button-container clickable button-" + size;
 
     return (
       <Tag className={addedClassNames} id={buttonId} href={href} type={type}>

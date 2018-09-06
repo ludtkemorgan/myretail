@@ -38,7 +38,7 @@ describe('Carousel component', () => {
       title="Blender"
       carouselId="test-carousel"
       numberShown={3} />);
-    expect(wrapper.find('img')).toHaveLength(4);
+    expect(wrapper.find('img')).toHaveLength(5);
   });
 
   it('should use fontAwesomIcon', () => {

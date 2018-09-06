@@ -8,6 +8,9 @@
   pointer-events: none;
   color: #cccccc; }
 
+.clickable {
+  cursor: pointer; }
+
 .type-20 {
   font-size: 20px; }
 

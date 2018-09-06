@@ -20,7 +20,14 @@
 
 .button-container {
   border-radius: 0.25rem;
-  cursor: pointer;
   padding: 0.5rem 0; }
   .button-container.button-large {
     font-size: 18px; }
+    @media only screen and (max-width: 768px) {
+      .button-container.button-large {
+        font-size: 13px; } }
+  .button-container.button-small {
+    font-size: 13px; }
+    @media only screen and (max-width: 768px) {
+      .button-container.button-small {
+        font-size: 10px; } }

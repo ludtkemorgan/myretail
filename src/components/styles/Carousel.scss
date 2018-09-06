@@ -8,14 +8,9 @@
 
 .carousel-additional {
   text-align: center;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .carousel-additional-image {
-  // height: 100%;
   max-width: 75px;
   padding: 5px;
 }
@@ -36,4 +31,8 @@
   .svg-inline--fa {
     font-size: 24px;
   }
+}
+
+.large-image {
+  width: 75%;
 }

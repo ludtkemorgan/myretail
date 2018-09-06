@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
 import ReactStars from 'react-stars';
+import Modal from 'react-modal';
 import './styles/Reviews.css';
 
 export class Reviews extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      modalIsOpen: false
+    };
+
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
   render() {
     const { customerReview } = this.props;
 
@@ -19,7 +39,15 @@ export class Reviews extends Component {
               overall
             </div>
           </div>
-          <a className="bold view-all">view all {customerReview.totalReviews} reviews</a>
+          <a className="bold view-all" onClick={this.openModal}>view all {customerReview.totalReviews} reviews</a>
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            contentLabel="reviews"
+            onRequestClose={this.closeModal}
+          >
+            <button onClick={this.closeModal}>Close Reviews</button>
+            {customerReview.Reviews && customerReview.Reviews.map((review, index) => <ReviewSection review={review} key={`customer-review-${index}`} />)}
+          </Modal>
         </div>
         <table className="sample-rating">
           <thead>
@@ -75,7 +103,7 @@ class ReviewSection extends Component {
         </div>
         {review.review}
         <div className="y-padding-top-twenty">
-          {review.screenName}
+          {review.screenName} &nbsp;
           {new Intl.DateTimeFormat('en-US', {
             year: 'numeric',
             month: 'long',
