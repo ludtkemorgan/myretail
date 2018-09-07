@@ -16,7 +16,7 @@ export class Carousel extends Component {
     this.state = {
       selectedImage: props.images.PrimaryImage[0].image,
       firstVisible: 1,
-      lastVisbile: props.numberShown,
+      lastVisible: props.numberShown,
       displayPrevious: "clickable",
       displayNext: "clickable",
       viewLargerModalOpen: false
@@ -34,20 +34,20 @@ export class Carousel extends Component {
     }
     this.setState(prevState => ({
       firstVisible: prevState.firstVisible - 1,
-      lastVisbile: prevState.lastVisbile - 1,
+      lastVisible: prevState.lastVisible - 1,
       displayPrevious: prevState.firstVisible === 1 ? "muted" : "clickable"
     }));
   }
 
   nextImage(e) {
     const numberOfImages = this.props.images.AlternateImages.length;
-    if (this.state.lastVisbile >= numberOfImages) {
+    if (this.state.lastVisible >= numberOfImages) {
       return;
     }
     this.setState(prevState => ({
       firstVisible: prevState.firstVisible + 1,
-      lastVisbile: prevState.lastVisbile + 1,
-      displayNext: prevState.lastVisbile + 1 >= numberOfImages ? "muted" : "clickable"
+      lastVisible: prevState.lastVisible + 1,
+      displayNext: prevState.lastVisible + 1 >= numberOfImages ? "muted" : "clickable"
     }));
   }
 
@@ -68,8 +68,8 @@ export class Carousel extends Component {
     const { images, title, carouselId } = this.props;
     const primaryImage = this.state.selectedImage;
     const firstAlternative = this.state.firstVisible > 0 ? this.state.firstVisible - 1 : 0;
-    const lastAlternative = this.state.lastVisbile > images.AlternateImages.length ?
-                              images.AlternateImages.length : this.state.lastVisbile;
+    const lastAlternative = this.state.lastVisible > images.AlternateImages.length ?
+                              images.AlternateImages.length : this.state.lastVisible;
 
     return (
       <div id={carouselId} className="carousel">
@@ -86,7 +86,7 @@ export class Carousel extends Component {
           <img className="carousel-image large-image" src={primaryImage} alt={title}/>
         </Modal>
         <div className="carousel-additional">
-          <a className={`change-image grid-column-fill ${this.state.displayPrevious}`} onClick={this.previousImage}>
+          <a id={`previous-${carouselId}`} className={`change-image grid-column-fill ${this.state.displayPrevious}`} onClick={this.previousImage}>
              <FontAwesomeIcon icon="angle-left" />
           </a>
           {this.state.firstVisible === 0 &&
@@ -112,7 +112,7 @@ export class Carousel extends Component {
                   onClick={() => this.setNewImage(image.image)}/>
               );
           },this)}
-            <a className={`change-image grid-column-fill ${this.state.displayNext}`} onClick={this.nextImage}>
+            <a id={`next-${carouselId}`} className={`change-image grid-column-fill ${this.state.displayNext}`} onClick={this.nextImage}>
               <FontAwesomeIcon icon="angle-right" />
             </a>
         </div>
